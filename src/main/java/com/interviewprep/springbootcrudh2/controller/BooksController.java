@@ -18,7 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.interviewprep.springbootcrudh2.model.Books;
 import com.interviewprep.springbootcrudh2.service.BooksService;  
   
-//mark class as Controller  
+/**
+ * 
+ * @author Admin
+ *
+ */
 @RestController  
 public class BooksController   
 {  
@@ -36,7 +40,11 @@ private List<Books> getAllBooks()
 	return booksService.getAllBooks();  
 
 }  
-//creating a get mapping that retrieves the detail of a specific book  
+/**
+ *  
+ * @param bookid
+ * @return
+ */
 @GetMapping("/book/{bookid}")  
 private Books getBooks(@PathVariable("bookid") int bookid)   
 {  
@@ -49,14 +57,22 @@ private ResponseEntity<Books> deleteBook(@PathVariable("bookid") int bookid)
 booksService.delete(bookid); 
 return new ResponseEntity<Books>(HttpStatus.OK);
 }  
-//creating post mapping that post the book detail in the database  
+/**
+ *  
+ * @param books
+ * @return integer if book is saved successfully it will return 1
+ */
 @PostMapping("/books")  
 private int saveBook(@RequestBody Books books)   
 {  
 booksService.saveOrUpdate(books);  
 return books.getBookid();  
 }  
-//creating put mapping that updates the book detail   
+/**
+ *   
+ * @param books
+ * @return Return books object
+ */
 @PutMapping("/books")  
 private Books update(@RequestBody Books books)   
 {  

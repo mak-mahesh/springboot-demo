@@ -10,7 +10,9 @@ import javax.persistence.Table;
 @Table  
 public class Books  
 {  
-//Defining book id as primary key  
+/**
+ * Entity class Books is a pojo. his class will be mapped with database table Book
+ */
 @Id  
 @Column  
 private int bookid;  
