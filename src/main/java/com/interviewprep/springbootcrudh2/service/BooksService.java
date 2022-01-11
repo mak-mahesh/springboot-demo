@@ -9,20 +9,31 @@ import org.springframework.stereotype.Service;
 import com.interviewprep.springbootcrudh2.model.Books;
 import com.interviewprep.springbootcrudh2.repository.BooksRepository;  
  
-//defining the business logic  
+/**
+ *   
+ * @author Admin
+ *
+ */
 @Service  
 public class BooksService   
 {  
 @Autowired  
 BooksRepository booksRepository;  
-//getting all books record by using the method findaAll() of CrudRepository  
+/**
+ *   
+ * @return Book object List
+ */
 public List<Books> getAllBooks()   
 {  
 List<Books> books = new ArrayList<Books>();  
 booksRepository.findAll().forEach(books1 -> books.add(books1));  
 return books;  
 }  
-//getting a specific record by using the method findById() of CrudRepository  
+/**
+ * 
+ * @param id get book object of specific id
+ * @return book object is returned
+ */
 public Books getBooksById(int id)   
 {  
 return booksRepository.findById(id).get();  
