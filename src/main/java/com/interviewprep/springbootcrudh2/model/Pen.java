@@ -1,3 +1,5 @@
+package com.interviewprep.springbootcrudh2.model;
+
 public class Pen{
 
 	private long id;
