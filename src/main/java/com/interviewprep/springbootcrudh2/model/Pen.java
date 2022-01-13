@@ -4,8 +4,7 @@ package com.interviewprep.springbootcrudh2.model;
 *@author admin
 *@version 1.0
 *
-*
-/
+*/
 public class Pen{
 
 	private long id;
