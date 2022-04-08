@@ -9,11 +9,7 @@ import org.springframework.stereotype.Service;
 import com.interviewprep.springbootcrudh2.model.Books;
 import com.interviewprep.springbootcrudh2.repository.BooksRepository;  
  
-/**
- *   
- * @author Admin
- *
- */
+
 @Service  
 public class BooksService   
 {  
